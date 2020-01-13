@@ -1,0 +1,108 @@
+Student: Cacovean Dan
+Master: Informatica Economica, Anul II
+grupa 116
+ASE Bucuresti 										13.01.2020
+
+
+
+
+
+
+Aplicatia
+CACHE Restaurant & Catering
+http://xwheel.eu/
+
+
+	Aplicatia este facuta in frameworkul Laravel, versiunea 5.8. Aditional, frameworkul cuprinde si componente Vue.JS. Arhitectura aplicatiei respecta modelul MVC (Model – View – Controller), in care: 
+	- modelul (Model) se ocupa de partea de informatii.  Sensul unui model (care, in fapt, este o clasa) este de a crea o ordine si claritate. El proceseaza datele care ajung in baza de date,
+	- vizualul (View) se ocupa de designul (sub forma de template), este, de fapt, interfata intre user si ce se afla in spate, aplicatia de business.
+	- controler-ul (Controller) gestioneaza relatia dintre user via interfata (View) si baza de date via model (Model). El proceseaza informatia de la user, cererile userului. Interogand baza de date, ofera userului raspunsul la cererea lui.
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+sursa: https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller#/media/File:MVC-Process.svg
+
+
+
+	Orice cerere trimisa de user (de ex apasarea unui buton sau un link sau cerea unei resurse necesita reincarcarea siteului ceea ce duce la o latenta in vizulizarea lui de catre user ). Componentele vue apeleaza asincron serverul ceea ce inseamna ca da raspuns doar unde este nevoie fara a mai trebui  ca siteul sa se reincarce. Acest lucru salveaza timp contribuind la o experienta mai eficienta pentru user. De aici expresia SPA (single page application) – ca si cum ar fi o singura pagina in care se incarca resursele cerute de user.
+	Conform https://dzone.com/articles/what-is-a-single-page-application continutul e  „generat dinamic prin capacitatea JavaScript de a manipula elementele DOM de pe pagina existentă în sine... O abordare SPA permite utilizatorului să continue să consume și să interacționeze cu pagina în timp ce noi elemente sunt actualizate sau preluate și poate duce la interacțiuni mult mai rapide și la reîncărcare de conținut”.
+
+Aplicația CACHE Restaurant & Catering de la adresa http://xwheel.eu/  cuprinde urmatoarele caracteristici:
+
+controlerul principal (Controller.php) cu controalele specifice:
+CategoryController.php – gestioneaza categoriile)
+AdminController.php – gestioneaza panoul de administrare
+MenuItemController.php – gestioneaza articolele de menu
+
+Modelele
+Category.php
+MenuItem.php
+User.php
+
+View este impartit intre Laravel si Vue
+
+pagini laravel
+
+app.blade.php
+home.blade.php
+login.blade.php
+register.blade.phop
+menu.blade.php
+menu-editor.blade.php
+menu.blade.php
+
+pagini vue
+
+CategoryManager.vue
+MenuEditor.vue
+MenuItem.vue
+MenuItemList.vue
+
+componente vue
+
+Vue.component('category-manager', require('./components/CategoryManager.vue'));
+Vue.component('menu-editor', require('./components/MenuEditor.vue'));
+
+Home Page: http://xwheel.eu/
+
+Website test: https://loadimpact.com/
+
+
+Wesite test: https://gtmetrix.com/
+
+
+
+
+
+
+
+
+Pagina de Produse: http://xwheel.eu/menu#aperitive
+Website test: https://loadimpact.com/
+
+
+
+
+Wesite test: https://gtmetrix.com/
+
